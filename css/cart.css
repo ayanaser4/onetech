@@ -1,0 +1,283 @@
+:root{
+    --mainColor:#09c;
+}
+
+*{
+    font-family: "Rubik", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s;
+}
+.logo a{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+}
+.search{
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    display: flex;
+}
+.search input{
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    flex-grow: 1;
+}
+.search select{
+    padding: 10px;
+    cursor: pointer;
+    border: 0;
+    border-left: 1px solid #ccc;
+}
+.search button{
+    padding: 12px;
+    border: none;
+    background-color: #09c;
+    color: white;
+    display: inline-block;
+    cursor: pointer;
+    border-top-right-radius: 5px ;
+    border-bottom-right-radius: 5px ;
+}
+.fav-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fav ,.cart{
+    margin-left: 20px;
+} 
+.fav a,.cart a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+}
+.fav a div ,.cart a div {
+    text-align: right;
+}
+.fav a div h4,.cart a div h4{
+    font-family: "Rubik", sans-serif;
+    color: #09c;
+}
+.fav a div span,.cart a div span{
+    color: #958e8e;
+}
+@media screen and (max-width: 992px) {
+    .search-bar{
+        order: 1;
+        width: 100%;
+    }
+    .fav_cart{
+        margin: 10px 0;
+    }
+}
+@media screen and (max-width: 400px){
+    .header-top {
+        justify-content: center;
+    }
+}
+/* ****************************************** */
+.header-bottom{
+    background-color: var(--mainColor);
+    position: sticky;
+    top: 0;
+    z-index: 999999;
+
+}
+.con2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+.inner div{
+    padding: 5px 0;
+}
+.catogary-left i{
+    font-size: 24px;
+    color: white;
+}
+.catogary-left select{
+    background-color: transparent;
+    border: 0;
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    padding: 10px;
+    padding-left: 0;
+}
+
+nav{ 
+    font-family: "Rubik", sans-serif;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+nav ul li{
+    /* padding: 5px 15px;  
+    font-weight: 600; */
+    text-decoration: none;
+    padding: 0 10px;
+    color: white;
+    font-weight: 500;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 13px;
+    display: block;
+}
+nav ul li:nth-child(5){
+    position: relative;
+}
+nav ul li:nth-child(5) ul{
+    position: absolute;
+    top: 30px;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all .5s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+nav ul li:nth-child(5) ul li{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}nav ul li:nth-child(5) ul li:last-child{
+    border-bottom:0;
+}
+nav ul li:nth-child(5) ul li a{
+    color: #09c;
+    padding: 10px 15px;
+    display: block;
+}
+nav ul li:nth-child(5):hover ul{
+    transform: scaleY(1)
+}
+.menu-bar{
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+    display: none;
+}
+
+@media screen and (max-width:992px) {
+    nav{
+        display: none;
+    }
+    .menu-bar{
+        display: block;
+    }
+}
+
+.cart1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+    position: relative;
+    
+
+}
+.car-con{
+    width: 70%;
+    margin: auto;
+    padding: 40px 0;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+}
+.img-cart img{
+    width: 40%;
+}
+.strong{
+    font-weight: 800;
+    
+}
+.weak{
+    font-weight: 100;
+
+}
+.color{
+    margin-bottom: 19px;
+
+}
+.fa-circle{
+    margin-bottom: 20px;
+    color: blue;
+}
+
+
+.head{
+    margin: auto;
+    width: 70%;
+    padding: 23px 0px;
+}
+.cart2{
+    width: 70%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 15px;
+}
+.cart2 p{
+    display: flex;
+    justify-content: flex-end;
+    padding: 35px 10px;
+} 
+.button {
+    justify-content: end;
+    display: flex;
+    width: 70%; margin: auto;
+}
+.button button{
+    padding: 2px 20px;
+    background-color: #09c;
+    border: 0;
+    border-radius: 5px;
+    font-size: 19px;
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+}
+
+.inner2{
+    padding: 35px 0;
+
+}
+.fa-trash{
+    color: red;
+    position: absolute;
+    bottom: 9px;
+    right: 14px;
+    cursor: pointer;
+}
+
+.fa-trash:hover{
+    color: rgba(255, 0, 0, 0.664);
+}
